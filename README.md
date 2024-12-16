@@ -17,7 +17,7 @@ Imageination is a web application that generates images from text descriptions u
 
 ## Getting Started 🚀
 
-- Simply visit the [website]() and explore!
+- Simply visit the [website](https://imageination.vercel.app/) and explore!
 
 ## Usage
 
