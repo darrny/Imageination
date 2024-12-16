@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Imageination 📸
 
-## Getting Started
+Imageination is a web application that generates images from text descriptions using the FLUX.1-dev AI model. Built with Next.js and hosted on Vercel, it provides a simple and intuitive interface for AI image generation.
 
-First, run the development server:
+## Features ✨
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Text-to-image generation using FLUX.1-dev model
+- Advanced parameter controls for image generation:
+  - Adjustable image dimensions (512px-1024px)
+  - Guidance scale control for prompt adherence
+  - Inference steps adjustment for quality control
+- Real-time image generation with loading indication
+- Interactive mini-game while waiting for generation
+- One-click image download functionality
+- Clean, responsive user interface
+- Rate limit handling with cooldown timer
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Getting Started 🚀
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Simply visit the [website]() and explore!
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Usage
 
-## Learn More
+1. Enter a text description in the input field
+2. (Optional) Adjust advanced parameters:
+   - Image width and height
+   - Guidance scale
+   - Number of inference steps
+3. Click "Generate" to create your image
+4. Download the generated image using the download button
 
-To learn more about Next.js, take a look at the following resources:
+## Technical Stack 🛠️
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Frontend Framework**: Next.js 13+ with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **AI Model**: FLUX.1-dev via Hugging Face API
+- **Hosting**: Vercel
+- **Package Manager**: pnpm
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Rate Limits 
 
-## Deploy on Vercel
+The application uses the Hugging Face free API, which has the following limitations:
+- Maximum of 3 image generations per minute
+- Automatic cooldown timer when rate limit is reached
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The application is configured for easy deployment on Vercel:
+
+1. Push your code to a GitHub repository
+2. Import the repository in Vercel
+3. Add your `HUGGINGFACE_API_KEY` to the environment variables
+4. Deploy!
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
