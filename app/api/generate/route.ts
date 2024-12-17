@@ -3,6 +3,8 @@ import { NextResponse } from 'next/server';
 
 const Hf = new HfInference(process.env.HUGGINGFACE_API_KEY);
 
+
+export const maxDuration = 60;
 export async function POST(req: Request) {
   try {
     const { prompt, params } = await req.json();
