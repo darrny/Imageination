@@ -120,7 +120,7 @@ export default function ImageGenerator() {
           {error && (
             <div className="mt-6 p-4 bg-emerald-50 border-l-4 border-emerald-500 text-emerald-700 rounded-r-lg flex items-center gap-2">
               <AlertCircle className="w-5 h-5 flex-shrink-0" />
-              <span>Don't give up, we are almost done! Hit generate again!</span>
+              <span>Do not give up, we are almost done! Hit generate again!</span>
             </div>
           )}
 
