@@ -111,7 +111,7 @@ export default function ImageGenerator() {
             </div>
 
             <div className="text-sm text-emerald-600 mt-2 ml-1">
-              Tip: May take up to 5 tries to generate an image, just keep retrying!
+              Tip: May take up to 10 tries to generate an image, just keep retrying!
             </div>
 
             <AdvancedOptions params={params} onChange={setParams} />
