@@ -76,8 +76,8 @@ export default function ImageGenerator() {
   };
 
   return (
-    <main className="min-h-screen bg-green-300 p-4">
-      <div className="max-w-4xl mx-auto pt-8">
+    <main className="min-h-screen bg-green-300 px-2 py-4 sm:p-4"> {/* Adjusted padding */}
+      <div className="max-w-4xl mx-auto pt-4 sm:pt-8"> {/* Adjusted top padding */}
         <div className="flex items-center justify-center mb-12 space-x-3">
           <div className="p-3 bg-emerald-800 rounded-xl shadow-lg">
             <Camera className="w-8 h-8 text-white" />
@@ -87,28 +87,31 @@ export default function ImageGenerator() {
 
         <div className="bg-white rounded-xl shadow-xl p-6 mb-8 transition-shadow hover:shadow-2xl">
           <form onSubmit={generateImage} className="space-y-4">
-            <div className="flex gap-3">
+            {/* Change the flex container to column on mobile */}
+            <div className="flex flex-col sm:flex-row gap-3">
               <input
                 type="text"
                 value={prompt}
                 onChange={(e) => setPrompt(e.target.value)}
                 placeholder="Describe the image you want to create..."
-                className="flex-1 p-4 rounded-lg border-2 border-emerald-200 focus:outline-none focus:border-emerald-500 focus:ring-0 text-lg transition-colors"
+                className="flex-1 p-4 rounded-lg border-2 border-emerald-200 focus:outline-none focus:border-emerald-500 focus:ring-0 
+                text-lg transition-colors text-gray-900 min-w-0"
                 required
               />
               <button
                 type="submit"
                 disabled={loading || cooldown > 0}
                 className="px-8 py-4 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 disabled:bg-emerald-300 
-                          transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl disabled:shadow-none
-                          transform hover:-translate-y-0.5 active:translate-y-0"
+                transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl disabled:shadow-none
+                transform hover:-translate-y-0.5 active:translate-y-0
+                w-full sm:w-auto" // Added w-full on mobile, auto width on desktop
               >
                 {loading ? 'Generating...' : cooldown > 0 ? `Wait ${cooldown}s` : 'Generate'}
               </button>
             </div>
 
             <div className="text-sm text-emerald-600 mt-2 ml-1">
-              Tip: Use simple, clear descriptions for best results
+              Tip: May take up to 5 tries to generate an image, just keep retrying!
             </div>
 
             <AdvancedOptions params={params} onChange={setParams} />
