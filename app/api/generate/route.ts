@@ -47,7 +47,7 @@ export async function POST(req: Request) {
       throw error;
     }
   } catch (error: any) {
-    console.error('Error generating image:', error);
+    console.error('Error generating image, please try again in a minute or so!');
     return NextResponse.json(
       { error: `Generation failed: ${error.message}` }, 
       { status: 500 }

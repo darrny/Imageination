@@ -76,13 +76,13 @@ export default function ImageGenerator() {
   };
 
   return (
-    <main className="min-h-screen bg-green-200 p-4">
+    <main className="min-h-screen bg-green-300 p-4">
       <div className="max-w-4xl mx-auto pt-8">
         <div className="flex items-center justify-center mb-12 space-x-3">
-          <div className="p-3 bg-emerald-600 rounded-xl shadow-lg">
+          <div className="p-3 bg-emerald-800 rounded-xl shadow-lg">
             <Camera className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-4xl font-bold text-emerald-700 tracking-tight">Imageination</h1>
+          <h1 className="text-4xl font-bold text-emerald-800 tracking-tight">Imageination</h1>
         </div>
 
         <div className="bg-white rounded-xl shadow-xl p-6 mb-8 transition-shadow hover:shadow-2xl">
